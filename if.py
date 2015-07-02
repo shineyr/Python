@@ -1,3 +1,7 @@
+# 本节学习了Python的条件判断
+# http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431611988455689d4c116b2c4ed6aec000776c00ed52000
+
+
 height = 1.75
 weight = 80.5
 bmi = weight / (height * height)

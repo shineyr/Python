@@ -1,5 +1,5 @@
 # sorted 练习题
-
+# http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014318230588782cac105d0d8a40c6b450a232748dc854000
 L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
 
 # 按名字排序，是tuple的第一元
