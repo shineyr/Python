@@ -1,3 +1,6 @@
+#偏函数
+# http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143184474383175eeea92a8b0439fab7b392a8a32f8fa000
+
 #(1)函数转换
 print(int("12345"))
 
