@@ -19,12 +19,7 @@ s.listen(5)
 print('Waiting for connection...')
 # 接下来，服务器程序通过一个永久循环来接受来自客户端的连接，
 # accept()会等待并返回一个客户端的连接
-while True:
-    # 接受一个连接
-    sock , addr = s.accept()
-    # 创建新线程处理连接
-    t = threading.Thread(target=tcplink , args = (sock,addr))
-    t.start()
+
 
 def tcplink(sock , addr):
     print('Accept new connection from %s:%s...' % addr)
@@ -37,6 +32,14 @@ def tcplink(sock , addr):
         sock.send(('Hello, %s!' % data).encode('utf-8'))
     sock.close()
     print('Connection from %s:%s closed.' % addr)
+
+
+while True:
+    # 接受一个连接
+    sock , addr = s.accept()
+    # 创建新线程处理连接
+    t = threading.Thread(target=tcplink , args = (sock,addr))
+    t.start()
 
 # 连接建立后，服务器首先发一条欢迎消息，然后等待客户端数据，并加上Hello再发送给客户端。
 # 如果客户端发送了exit字符串，就直接关闭连接
